@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset = 'utf-8'>
+{% block content %}
+
+<dd><h1>Анализатор тональности отзывов</h1>
+
+<form action="" method=post name="mra">
+    <dl>
+        <dt> <div class="layer1"> Введите отзыв: </div> <br>
+
+        <dt><textarea name=text rows=15 cols=80>{{ text }}</textarea>
+        <dt><input type=submit value="Ввод">
+    </dl>
+</form>
+
+
+<dd><br>Предсказание тональности отзыва:
+<br>
+<dd>{{ prediction_message }}
+
+{% endblock %}
+
+<style>
+input[type="submit"]{
+     background-color: #4CAF50;
+     border: none;
+     color: white;
+     padding: 16px 32px;
+     text-decoration: none;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 5px
+}
+
+</style>
+
+<style>
+input[type="text"],
+select,
+textarea {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+</style>
+
+
